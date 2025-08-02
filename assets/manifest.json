@@ -1,7 +1,7 @@
 {
-    "name": "TW-Thailand – Travel Packing Guide 2025",
+    "name": "Thailand Travel Packing Guide",
     "short_name": "Packing Guide",
-    "start_url": "/GJN-2025-packing/",
+    "start_url": "/travel-packing-guide/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#0b3d91",
