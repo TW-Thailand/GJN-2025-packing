@@ -1,7 +1,7 @@
 {
     "name": "Thailand Travel Packing Guide",
     "short_name": "Packing Guide",
-    "start_url": "/travel-packing-guide/",
+    "start_url": "./",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#0b3d91",
