@@ -1,22 +1,21 @@
 
 {
-  "name": "Thailand Travel Packing Guide",
-  "short_name": "Packing Guide",
-  "start_url": "/GJN-2025-packing/",
-  "scope": "/GJN-2025-packing/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0b3d91",
-  "icons": [
-    {
-      "src": "assets/icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+    "name": "Thailand Travel Packing Guide 2025",
+    "short_name": "Travel Packing Guide",
+    "start_url": "/GJN-2025-packing/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0b3d91",
+    "icons": [
+        {
+            "src": "assets/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
