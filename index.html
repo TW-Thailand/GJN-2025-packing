@@ -2,71 +2,62 @@
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>🚐 Thailand – Travel Packing Guide 2025</title>
-  <link rel="manifest" href="/GJN-2025-travel-packing/assets/manifest.json">
-  <link rel="icon" type="image/png" href="/GJN-2025-travel-packing/assets/icons/icon-192x192.png">
-  <link rel="apple-touch-icon" href="/GJN-2025-travel-packing/assets/icons/icon-192x192.png">
-  <link rel="shortcut icon" type="image/png" href="/GJN-2025-travel-packing/assets/icons/icon-192x192.png">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>
+   Thailand Travel Packing Guide 2025
+  </title>
+  <link href="/manifest.json" rel="manifest"/>
+  <link href="assets/icons/icon-192x192.png" rel="icon" type="image/png"/>
+  <link href="assets/icons/icon-192x192.png" rel="apple-touch-icon"/>
+  <link href="assets/icons/icon-192x192.png" rel="shortcut icon" type="image/png"/>
   <style>
    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 2rem; }
     h1 { text-align: center; }
-
+    h1::before { content: "\1F9F3 "; }
     details { margin-bottom: 1rem; background: #fff; border: 1px solid #ccc; border-radius: 4px; padding: 1rem; }
     summary { font-weight: bold; font-size: 1.2rem; cursor: pointer; margin: -1rem -1rem 1rem -1rem; padding: 1rem; background: #f0f0f0; border-bottom: 1px solid #ccc; }
-    table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1em;
-}
-    th, td {
-  padding: 0.5em;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
-}
-    th {
-  background: #eaeaea;
-}
-    tr:nth-child(even) td {
-  padding: 0.5em;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
-}
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td { padding: 0.6rem; border: 1px solid #ccc; }
+    th { background: #e9e9e9; }
+    tr:nth-child(even) td { background: #f8eee6; }
     td:first-child { text-align: left; }
     td:not(:first-child) { text-align: center; }
-
+  
     .table-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin-top: 1em;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1em;
-}
-
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    
     th:nth-child(2), th:nth-child(3), th:nth-child(4), th:nth-child(5),
     td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5) {
       width: 15px;
       max-width: 15px;
       text-align: center;
     }
-
+    
     th:first-child, td:first-child {
       width: 50px;
       max-width: 50px;
       word-wrap: break-word;
       white-space: normal;
     }
-  
-/* Alternating row shading similar to v1 */
-tbody tr:nth-child(odd) { background: #f7ede5; }
-
-</style>
+  </style>
  </head>
  <body>
   <h1>
-   🚐 Thailand – Travel Packing Guide 2025
+   Thailand Travel Packing Guide 2025
   </h1>
   <details>
    <summary>
@@ -1064,8 +1055,45 @@ tbody tr:nth-child(odd) { background: #f7ede5; }
     </table>
    </div>
   </details>
+  <script>
+   if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log("Service Worker registered"))
+      .catch(err => console.error("Service Worker registration failed:", err));
+  }
+  </script>
+ 
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log("Service Worker registered"))
+    .catch(err => console.error("Service Worker registration failed:", err));
+}
 
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
 
+  const installBtn = document.createElement("button");
+  installBtn.textContent = "Install App";
+  installBtn.style = "position:fixed;bottom:10px;right:10px;padding:10px;font-size:1rem;background:#0b3d91;color:#fff;border:none;border-radius:8px;z-index:1000;";
+  document.body.appendChild(installBtn);
+
+  installBtn.addEventListener("click", () => {
+    installBtn.remove();
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(choiceResult => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log("User accepted the install prompt");
+      } else {
+        console.log("User dismissed the install prompt");
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+</script>
 
 </body>
 </html>
